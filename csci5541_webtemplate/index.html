@@ -35,7 +35,7 @@
           </div>
           <p>
                         
-              Member 1
+              Yi-Ching Ho
             
           </p>
         </div>
@@ -48,7 +48,7 @@
           </div>
           <p>
             
-            Member 2
+            Oran Frenstad
             
           </p>
         </div>
@@ -60,7 +60,7 @@
             
           </div>
           <p>
-              Member 3
+              Weixuan Lin
           </p>
         </div>
         
@@ -71,7 +71,7 @@
             
           </div>
           <p>
-            Member 4
+            the spirit of Haloween
           </p>
         </div>
         
@@ -130,15 +130,20 @@
     <h2 id="abstract">Abstract</h2>
 
 <p>One or two sentences on the motivation behind the problem you are solving. One or two sentences describing the approach you took. One or two sentences on the main result you obtained.</p>
-
+<p>Around the world, everybody needs medical care, and it is hard to provide an adequite amount of care to everybody. 
+  While there is an idea to remedy some of this with doctor chat-bots that assist with the process, they are far off from being able eto be used in real settings, such as a prior work called Chat Doctor
+  Our work adds location data to the prompts given to the LLM to try and improve its responses.
+  The idea behind this is to diseased can have different frequencies in different areas, so giving it that locality information may allow it to make more informed predictions.
+</p>
 <hr>
 
 <h2 id="teaser">Teaser Figure</h2>
 
 <p>A figure that conveys the main idea behind the project or the main application being addressed. This figure is from <a href="https://arxiv.org/pdf/2210.07469">StyLEx</a>.</p>
 
-<p class="sys-img"><img src="./files/teaser.png" alt="imgname"></p>
+<p class="sys-img"><img src="./files/chat_doctor_next.jpg" alt="imgname"></p>
 
+<p>The process used to train Chat Doctor Next</p>
 
 <h3 id="the-timeline-and-the-highlights">Any subsection</h3>
 
@@ -152,21 +157,24 @@
 <b>What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon.</b>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We added location information into a prior work's LLM for disease diagnosis by passing where the patient is as part of the prompt. 
+This will ideally improve the model's ability to diagnose due to being able to hone in on more common diseases in the area it is diagnosing for 
 </p>
 
 <p>
 <b>How is it done today, and what are the limits of current practice?</b>
 </p>
 <p>
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Chat Doctor, the LLM our work is based off of, trained itself on conversations between doctors and patients without location information.
+They then measured the success using BERTscore. This allowed for general diagnoses, but not those that are region-specific
 <p>
 
 <p>
 <b>Who cares? If you are successful, what difference will it make?</b>
 </p>
 <p>
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+If our work is succcessful, the world will be closer to effectively using AI as aids to doctor's.
+This would make healthcare more accessible and faster, improving quality and quantity
 </p>
 
 <hr>
@@ -186,7 +194,9 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 </p>
 
 <p>
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+The biggest setback we have had is the libraries used for Chat Doctor, like we planned to base our work off of,  are no longer easily compatible with each other. 
+Our biggest struggle has been, then, getting the code running, as we thought it would be incredibly simple, but it ended up being incredibly difficult.
+Going forward, we will likely have to continue to make modificaitons in order to get the results similar to Chat Doctor
 </p>
 
 <hr>
