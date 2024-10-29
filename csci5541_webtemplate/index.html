@@ -71,7 +71,7 @@
             
           </div>
           <p>
-            the spirit of Haloween
+            the spirit of Halloween
           </p>
         </div>
         
@@ -134,6 +134,7 @@
   While there is an idea to remedy some of this with doctor chat-bots that assist with the process, they are far off from being able eto be used in real settings, such as a prior work called Chat Doctor
   Our work adds location data to the prompts given to the LLM to try and improve its responses.
   The idea behind this is to diseased can have different frequencies in different areas, so giving it that locality information may allow it to make more informed predictions.
+  While we are still incorporating the elements of our experiment, we have gotten a baseline to be functional.
 </p>
 <hr>
 
@@ -186,7 +187,8 @@ This would make healthcare more accessible and faster, improving quality and qua
 </p>
 
 <p>
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+So far, we've rebuilt parts of ChatDoctor to enable them to be run. Our plan is to encorporate the WHO API to modify the prompts given
+to the chatbot to account for locality data and we can check how it affects the generated results of the model.
 </p>
 
 <p>
@@ -206,33 +208,8 @@ Going forward, we will likely have to continue to make modificaitons in order to
 <b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
 </p>
 <p>
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+So far, we have the loss of a model decreasing as it trains, showing the effectiveness of the training process. Long-term, we intend to measure using BERTscore, to measure in the same way Chat Doctor measured its results
 </p>
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center"><strong>Experiment</strong></th>
-      <th style="text-align: center">1</th>
-      <th style="text-align: center">2</th>
-      <th style="text-align: center">3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center"><strong>Sentence</strong></td>
-      <td style="text-align: center">Example 1</td>
-      <td style="text-align: center">Example 2</td>
-      <td style="text-align: center">Example 3</td>
-    </tr>
-    <tr>
-      <td style="text-align: center"><strong>Errors</strong></td>
-      <td style="text-align: center">error A, error B, error C</td>
-      <td style="text-align: center">error C</td>
-      <td style="text-align: center">error B</td>
-    </tr>
-  </tbody>
-  <caption>Table 1. This is Table 1's caption</caption>
-</table>
 <br>
 <div style="text-align: center;">
 <img style="height: 300px;" alt="" src="./files/results.png">
@@ -251,7 +228,13 @@ Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed 
   Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
   What limitations does your model have? How can you extend your work for future research?</p>
 
-
+<p>Anybody should be able to reproduce our results by downloading the code and running it on the HealthCareMagic100k dataset</p>
+<p>If our experiments are successful, it could suggest to future researchers that they should add a locality element to their future LLMs</p>
+<p>Replacing doctors with a chatbot has serious implicatoins, especially at their current level of performance. 
+  The chatbot currently offers a much lower standard of care than a doctor would, so replacing any Doctors with chatbots, even if potentially more accessible, could lower the quality of care. 
+Also, people have a tendency to always trust technology, and giving that kind of trust to a chatbot that is prone to errors is risky. 
+The best solution to this is likely a slow integration of chatbots into healthcare work, where to start their opinions are treated with the highest skepticism</p>
+<p> The model from our work is unable to do any healthcare work besides simulating a conversation between doctor and patient. More advanced models for more intense integration would likely require a multi-modal model</p>
 <hr>
 
 
