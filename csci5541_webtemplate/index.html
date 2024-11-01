@@ -131,18 +131,18 @@
 
 <p>One or two sentences on the motivation behind the problem you are solving. One or two sentences describing the approach you took. One or two sentences on the main result you obtained.</p>
 <p>Around the world, everybody needs medical care, and it is hard to provide an adequite amount of care to everybody. 
-  While there is an idea to remedy some of this with doctor chat-bots that assist with the process, they are far off from being able eto be used in real settings, such as a prior work called Chat Doctor
-  Our work adds location data to the prompts given to the LLM to try and improve its responses.
-  The idea behind this is to diseased can have different frequencies in different areas, so giving it that locality information may allow it to make more informed predictions.
+  While there is an idea to remedy some of this with doctor chat-bots that assist with the process, they are far off from being able to be used in real settings. One way we want to try and improve them is by making
+  it able to understand outbreaks. For our work, we want to expand the work of a chat bot called Chat Doctor by making the LLM also have to predict diseases based on news headlines in the area.
+  The idea behind this is health resources are often the most strained during outbreaks, so making the model better able to handle these situations could allow for more proactive handling of healthcare
   While we are still incorporating the elements of our experiment, we have gotten a baseline to be functional.
 </p>
 <hr>
 
 <h2 id="teaser">Teaser Figure</h2>
 
-<p>A figure that conveys the main idea behind the project or the main application being addressed. This figure is from <a href="https://arxiv.org/pdf/2210.07469">StyLEx</a>.</p>
+<p>A figure that conveys the main idea behind the project or the main application being addressed.</p>
 
-<p class="sys-img"><img src="./files/chat_doctor_next.jpg" alt="imgname"></p>
+<p class="sys-img"><img src="./files/chatdoctornext.png" alt="imgname"></p>
 
 <p>The process used to train Chat Doctor Next</p>
 
@@ -158,8 +158,8 @@
 <b>What did you try to do? What problem did you try to solve? Articulate your objectives using absolutely no jargon.</b>
 </p>
 <p>
-We added location information into a prior work's LLM for disease diagnosis by passing where the patient is as part of the prompt. 
-This will ideally improve the model's ability to diagnose due to being able to hone in on more common diseases in the area it is diagnosing for 
+We added location information into a prior work's LLM for disease diagnosis by giving headlines as a prompt. 
+This will ideally improve the model's ability to predict groups of outbreaks.
 </p>
 
 <p>
@@ -187,8 +187,8 @@ This would make healthcare more accessible and faster, improving quality and qua
 </p>
 
 <p>
-So far, we've rebuilt parts of ChatDoctor to enable them to be run. Our plan is to encorporate the WHO API to modify the prompts given
-to the chatbot to account for locality data and we can check how it affects the generated results of the model.
+So far, we've rebuilt parts of ChatDoctor to enable them to be run. Our plan moving forward is to encorporate NewsAPI to allow for headline prompts and compare with the maps on 
+preventepidemics.org while maintaining Chat Doctor's original diagnosis capabilities.
 </p>
 
 <p>
@@ -208,7 +208,8 @@ Going forward, we will likely have to continue to make modificaitons in order to
 <b>How did you measure success? What experiments were used? What were the results, both quantitative and qualitative? Did you succeed? Did you fail? Why?</b>
 </p>
 <p>
-So far, we have the loss of a model decreasing as it trains, showing the effectiveness of the training process. Long-term, we intend to measure using BERTscore, to measure in the same way Chat Doctor measured its results
+So far, we have the loss of a model decreasing as it trains, showing the effectiveness of the training process. Long-term, we intend to measure using BERTscore, to measure in the same way Chat Doctor measured its results,
+and we intend to measure what portion of headline predictions correctly predict the disease of the outbreak.
 </p>
 <br>
 <div style="text-align: center;">
@@ -228,8 +229,8 @@ So far, we have the loss of a model decreasing as it trains, showing the effecti
   Does your work have potential harm or risk to our society? What kinds? If so, how can you address them?
   What limitations does your model have? How can you extend your work for future research?</p>
 
-<p>Anybody should be able to reproduce our results by downloading the code and running it on the HealthCareMagic100k dataset</p>
-<p>If our experiments are successful, it could suggest to future researchers that they should add a locality element to their future LLMs</p>
+<p>Anybody should be able to reproduce our results by downloading our code and running it on the HealthCareMagic100k dataset, along with integrating the APIs for news and outbreak maps</p>
+<p>If our experiments are successful, it could suggest to future researchers that they should add a locality element to their future LLMs, and that more focus should be put into using LLMs to predict outbreaks</p>
 <p>Replacing doctors with a chatbot has serious implicatoins, especially at their current level of performance. 
   The chatbot currently offers a much lower standard of care than a doctor would, so replacing any Doctors with chatbots, even if potentially more accessible, could lower the quality of care. 
 Also, people have a tendency to always trust technology, and giving that kind of trust to a chatbot that is prone to errors is risky. 
